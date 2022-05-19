@@ -1,0 +1,282 @@
+@font-face {
+    font-family: sourceCodePro;
+    src: url(../src/fonts/Source_Code_Pro/SourceCodePro-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: comfortaa;
+    src: url(../src/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: truculenta;
+    src: url(../src/fonts/Truculenta/Truculenta-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
+/*Variables*/
+
+:root{
+    /*Color*/
+    --base: #E8EFED;
+    --primary: #6DA9A8;
+    --secondary: #B2BDBD;
+    --terciary: #BCA588;
+    --text-color: #253030;
+
+    /*Spacings*/
+    --spacing-large: 4rem;
+    --spacing-medium: 2.4rem;
+    --spacing-small: 2rem;
+    --spacing-xxsmall: 0.8rem;
+
+    /*Font family*/
+    --font-principal: comfortaa;
+    --font-title: truculenta;
+    --font-menu: sourceCodePro;
+
+    /*Font size*/
+    --text-large: 5.2em;
+    --text-medium: 2.4em;
+    --text-base: 1.6em;
+    --text-small: 1.4em;
+}
+
+/*Reset*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-base)
+}
+
+/*Fonts*/
+
+h1{
+    font-family: var(--font-title);
+    text-align: center;
+    margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+}
+
+h2{
+    font-family: var(--font-principal);
+}
+
+h3{
+    font-family: var(--font-principal);
+    text-align: center;
+}
+
+p{
+    font-family: var(--font-principal);
+}
+
+label{
+    font-family: var(--font-principal);
+}
+
+.header__navigationMenuItems{
+    font-family: var(--font-menu);
+}
+
+/*Body*/
+
+body{
+    background-color: var(--base);
+    display: grid;
+    grid-template-rows: 75px 1fr 75px;
+    grid-template-columns: Reset(4,1fr);
+}
+
+.explanationParagraph{
+    text-align: center;
+}
+
+/*Header*/
+
+.header{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--spacing-xxsmall);
+    padding-right: var(--spacing-xxsmall);
+}
+
+.header__logo{
+    padding-top: var(--spacing-xxsmall);
+}
+
+.header__navigationMenu{
+    margin-right: var(--spacing-xxsmall);
+    align-self: flex-end;
+    padding-bottom: var(--spacing-xxsmall);
+    display: flex;
+    gap: var(--spacing-xxsmall);
+    flex-direction: row;
+}
+
+.header__navigationMenuItems{
+    color: var(--base);
+}
+
+/*Index*/
+
+.patreon{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.patreon__article{
+    width: 200px;
+}
+
+.patreon__text{
+    width: 255px;
+    text-align: center;
+}
+
+/*Contact_me*/
+
+.contactPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.contactForm{
+    padding: 15px 15px 15px 15px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+}
+
+.thanks__text{
+    margin-top: var(--spacing-xxsmall);
+    margin-bottom: var(--spacing-xxsmall);
+}
+
+.thanks__image{
+    width: 600px;
+}
+
+/*About_me*/
+
+.about--flex{
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-large);
+    margin: var(--spacing-medium);
+}
+
+.traits{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: var(--spacing-xxsmall);
+}
+
+.traits__cardImage{
+}
+
+/*Character_design*/
+
+.characterDesignGallery{
+    display: grid;
+    grid-template: repeat(3,1fr) / repeat(14,1fr);
+    justify-content: space-around;
+    justify-items: center;
+    gap: var(--spacing-xxsmall);
+    margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+}
+
+.characterDesignGallery__card{
+    width: 20rem;
+    text-align: center;
+}
+
+.characterDesignGallery__card--gold{
+    width: 3fr;
+    text-align: center;
+}
+
+.characterDesignGallery__img{
+    width: 20rem;
+    border-radius: 10px;
+
+}
+.characterDesignGallery__img--gold{
+    width: 24rem;
+    border-radius: 10px;
+
+}
+
+.card1{
+    grid-column: 2/5;
+}
+.card2{
+    grid-column: 5/8;
+}
+.card3{
+    grid-column: 8/11;
+}
+.card4{
+    grid-column: 11/14;
+}
+.card5{
+    grid-column: 2/6;
+}
+.card6{
+    grid-column: 6/10;
+}
+.card7{
+    grid-column: 10/14;
+}
+.card8{
+    grid-column: 2/5;
+}
+.card9{
+    grid-column: 5/8;
+}
+.card10{
+    grid-column: 8/11;
+}
+.card11{
+    grid-column: 11/14;
+}
+/*Footer*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--spacing-xxsmall);
+    padding-right: var(--spacing-xxsmall);
+    background-color: var(--secondary);
+    align-content: center;
+}
+
+.footer__socialMedia{
+    display: flex;
+    justify-content: space-between;
+    width: 9em;
+    align-self: center;
+}
+
+footer a svg{
+    width: 2em;
+    height: auto;
+    color: var(--text-color)
+}
+
+footer  p{
+    align-self: center;
+}
+
+footer  a{
+    align-self: center;
+}
+
+

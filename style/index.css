@@ -17,6 +17,7 @@
     /*Color*/
     --base: #E8EFED;
     --primary: #6DA9A8;
+    --primary-dark: #3c5f5f;
     --secondary: #B2BDBD;
     --terciary: #BCA588;
     --text-color: #253030;
@@ -132,6 +133,12 @@ body{
 
 .header__navigationMenuItems{
     color: var(--base);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.header__navigationMenuItems:hover{
+    background: var(--primary-dark);
 }
 
 /*Index*/
@@ -151,6 +158,12 @@ body{
     text-align: center;
 }
 
+.patreon img:hover{
+    filter: grayscale(50%);
+    -webkit-transform:scale(0.8);
+    transform:scale(0.9)
+}
+
 /*Character_design*/
 
 .characterDesignGallery{
@@ -164,19 +177,80 @@ body{
     text-align: center;
 }
 
-.characterDesignGallery__card{
-    width: 35em;;
+.flipCard{
+    position: relative;
+    margin: 20px;
+    width: 350px;
+    height: 466px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.flipCard__body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.9s;
+}
+
+
+.flipCard__imageContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.flipCard__imageContainer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateY(180deg);
+}
+
+.flipCard__textContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#bec2cb,#c4cace);
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCard__body{
+    transform: rotateY(180deg);
+}
+
+.flipCard__textContainer p{
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(45deg, #FE0061,#FFEB3B);
+    transform: translateZ(100px);
+    margin-top: 10em;
+    border-radius: 10px;
+}
+
+.gold{
+    width: 400px;
+    height: 531px;
+    
+}
+
+.gold .flipCard__textContainer{
+    background: radial-gradient(#f7ef8a,#d2ac47);
+}
+
+.gold p{
+    margin-top: 12em;
 }
 
 .characterDesignGallery__img{
-    width: 35em;
     border-radius: 10px;
-
-}
-.characterDesignGallery__img--gold{
-    width: 40em;
-    border-radius: 10px;
-
 }
 
 .card1{
@@ -284,6 +358,12 @@ footer  p{
 
 footer  a{
     align-self: center;
+}
+
+footer a:hover{
+    padding: .5em;
+    border-radius: 10px;
+    background: var(--primary-dark);
 }
 
 @media screen and (max-width: 821px){

@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/index.css" />
     <link rel="shortcut icon" href="src/img/dinkLogo.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/index.css" />
+
     <title>Dink_Arts</title>
   </head>
 
@@ -13,23 +15,46 @@
     <!-- Header -->
     <header class="header">
       <div>
-      <a href="index.html" class="header__logo"
-        ><img src="src/img/Logo.png" class="logo__img" alt="Dink Arts logo"
-      /></a>
-    </div>
-      <nav class="header__navigationMenu">
-        <a href="pages/characterDesign.html" class="header__navigationMenuItems"
-          >Character_design</a
-        >
-        <a href="pages/dnd_homebrew.html" class="header__navigationMenuItems"
-          >Dnd_homebrew</a
-        >
-        <a href="pages/about_me.html" class="header__navigationMenuItems"
-          >About_me</a
-        >
-        <a href="pages/contact_me.html" class="header__navigationMenuItems"
-          >Contact_me</a
-        >
+        <a href="index.html" class="header__logo"
+          ><img src="src/img/Logo.png" class="logo__img" alt="Dink Arts logo"
+        /></a>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a
+                href="pages/characterDesign.html"
+                class="header__navigationMenuItems"
+                >Character_design</a
+              >
+              <a
+                href="pages/dnd_homebrew.html"
+                class="header__navigationMenuItems"
+                >Dnd_homebrew</a
+              >
+              <a href="pages/about_me.html" class="header__navigationMenuItems"
+                >About_me</a
+              >
+              <a
+                href="pages/contact_me.html"
+                class="header__navigationMenuItems"
+                >Contact_me</a
+              >
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <!-- Header end -->
@@ -41,8 +66,9 @@
         alt="A gif/video of the drawing process"
         id="sketch"
       />
+      <h1>Dinks_Arts</h1>
       <!-- Patreon -->
-      <section class="patreon">
+      <section class="d-flex justify-content-evenly flex-wrap">
         <article class="patreon__article">
           <a href="https://patreon.com" target="_blank">
             <img
@@ -83,7 +109,7 @@
             <h3>$15 Gold</h3>
             <p class="patreon__text">
               the gold level allows you to chat and meet me via zoom while I'm
-              drawing or planning DnD sessions
+              drawing or planning D&D sessions
             </p>
           </div>
         </article>
@@ -98,7 +124,7 @@
             <h3>$20 Platinum</h3>
             <p class="patreon__text">
               the last level gives you a opportunity to be included in a Patreon
-              Dnd table runned by me
+              D&D table runned by me
             </p>
           </div>
         </article>
@@ -108,7 +134,7 @@
     <!-- Footer-->
     <footer>
       <p>Copyright Dink_Arts</p>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="footer_homeLink">Home</a>
 
       <nav class="footer__socialMedia">
         <a href="https://www.instagram.com/dink_arts/" target="_blank">
@@ -127,5 +153,6 @@
     </footer>
     <!-- Footer end -->
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

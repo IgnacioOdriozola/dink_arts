@@ -97,7 +97,7 @@ label{
 body{
     background-color: var(--base);
     display: grid;
-    grid-template-rows: 75px 1fr 75px;
+    grid-template-rows: 7em  100% 7em;
 }
 
 .explanationParagraph{
@@ -110,12 +110,13 @@ body{
     background-color: var(--primary);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-left: var(--spacing-xxsmall);
     padding-right: var(--spacing-xxsmall);
 }
 
 .header__logo{
-    padding-top: var(--spacing-xxsmall);
+    padding-top: var(--spacing-me);
 }
 
 .logo__img{
@@ -135,10 +136,24 @@ body{
     color: var(--base);
     padding: 1rem;
     border-radius: 10px;
+    text-decoration: none;
 }
 
 .header__navigationMenuItems:hover{
     background: var(--primary-dark);
+    text-decoration: none;
+    color: var(--base);
+}
+
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-sm,
+.navbar > .container-md,
+.navbar > .container-lg,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+    background: #6DA9A8;
+    border-radius: 10px;
 }
 
 /*Index*/
@@ -158,7 +173,7 @@ body{
     text-align: center;
 }
 
-.patreon img:hover{
+.patreon__article img:hover{
     filter: grayscale(50%);
     -webkit-transform:scale(0.8);
     transform:scale(0.9)
@@ -237,8 +252,7 @@ body{
 
 .gold{
     width: 400px;
-    height: 531px;
-    
+    height: 531px; 
 }
 
 .gold .flipCard__textContainer{
@@ -287,6 +301,32 @@ body{
     grid-column: 11/14;
 }
 
+/*Dnd_homebrew*/
+
+.homebrewModal__picture{
+    width: 45%;
+}
+
+.homebrewModal__img{
+    width: 100%;
+}
+
+.homebrewList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.homebrewList__button{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.list-group-item.active{
+    background-color: var(--primary);
+    border-color: var(--primary-dark);
+}
+
 /*About_me*/
 
 .about--flex{
@@ -295,6 +335,11 @@ body{
     gap: var(--spacing-large);
     margin: var(--spacing-medium);
 }
+
+.portrait{
+    width: 45rem;
+}
+
 
 .traits{
     display: flex;
@@ -310,12 +355,16 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10rem;
+    margin-top: 3em;
 }
 
 .contactForm{
     padding: 15px;
     border-radius: 10px;
     background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .thanks__text{
@@ -358,12 +407,16 @@ footer  p{
 
 footer  a{
     align-self: center;
+    text-decoration: none;
+    color: var(--primary-dark);
 }
 
 footer a:hover{
     padding: .5em;
     border-radius: 10px;
     background: var(--primary-dark);
+    color: var(--base);
+    text-decoration: none;
 }
 
 @media screen and (max-width: 821px){
@@ -380,8 +433,8 @@ footer a:hover{
    }
 
    .characterDesignGallery__card--gold{
-    width: .7fr;
-}
+        width: .7fr;
+    }
 
     .characterDesignGallery__img{
          width: 32rem; 
@@ -478,9 +531,15 @@ footer a:hover{
 }
 
 @media screen and (max-width: 480px){
+
+    /*Body*/
+
+    body{
+        grid-template-rows: 10em  100% 12em;
+    }
      
     /*Header*/
-    .header{
+    /* .header{
         display: flex;
         align-items: center;
     }
@@ -491,7 +550,7 @@ footer a:hover{
 
     .logo__img{
         width: 15rem;
-    }
+    } */
 
     /*TODO a convertir en un desplegable*/
     .header__navigationMenu{

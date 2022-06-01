@@ -4,21 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/index.css" />
     <link rel="shortcut icon" href="../src/img/dinkLogo.ico" type="image/x-icon"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/index.css" />
+
     <title>Character_design</title>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
-      <a href="../index.html" class="header__logo">
-        <img src="../src/img/Logo.png" class="logo__img" alt="Dink Arts logo"/>
-      </a>
-      <nav class="header__navigationMenu">
-        <a href="characterDesign.html" class="header__navigationMenuItems">Character_design</a>
-        <a href="dnd_homebrew.html" class="header__navigationMenuItems">Dnd_homebrew</a>
-        <a href="about_me.html" class="header__navigationMenuItems">About_me</a>
-        <a href="contact_me.html" class="header__navigationMenuItems">Contact_me</a>
+      <div>
+        <a href="../index.html" class="header__logo"
+          ><img src="../src/img/Logo.png" class="logo__img" alt="Dink Arts logo"
+        /></a>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a
+                href="../pages/characterDesign.html"
+                class="header__navigationMenuItems"
+                >Character_design</a
+              >
+              <a
+                href="../pages/dnd_homebrew.html"
+                class="header__navigationMenuItems"
+                >Dnd_homebrew</a
+              >
+              <a href="../pages/about_me.html" class="header__navigationMenuItems"
+                >About_me</a
+              >
+              <a
+                href="../pages/contact_me.html"
+                class="header__navigationMenuItems"
+                >Contact_me</a
+              >
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <!-- Header end -->
@@ -40,7 +75,7 @@
                 alt="a drow pirate"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 I want a drow pirate too elegant and handsome.
                 He is bald and wears a wide-brimmed hat and one less eye
@@ -57,7 +92,7 @@
                 alt="a cleric of balance"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 Draw for me a woman cleric with a rastafari hairstyle.
                 Her clothes are decorated with an embroidery of a golden balance. 
@@ -74,7 +109,7 @@
                 alt="a paladin of stars"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 My character is Sebastiaen a human paladin of the stars goddes.
                 He's a young man who wants to bring peace to the world
@@ -91,7 +126,7 @@
                 alt="a social network avatar for a girl"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 Hi! i'm not looking for a Dnd character, 
                 i want you to draw me to my social network profiles.
@@ -109,7 +144,7 @@
                 alt="a human alquimist selling her potions"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 Sarah is an alchemist and she sells her creations with her family.
                 She is a shy and tiny blonde human who wants to explore the world
@@ -126,7 +161,7 @@
                 alt="a row in a tavern"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 I want you to draw Peregrin, a mischievous gnome rogue who has mastered the rapier and daggers.
                 He wears fancy clothes and is very nice 
@@ -143,7 +178,7 @@
                 alt="a rogue spy in the top of roofs"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 My character is a drow spy. 
                 She is a woman who does everything possible to achieve her goals.
@@ -160,7 +195,7 @@
                 alt="a bard tiefling playing a violin"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 I want a bard tiefling. He plays the violin and is very talented and passionate.
                 When it plays no one can avoid seeing it
@@ -177,7 +212,7 @@
                 alt="a human bartender NPC"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 I need a waitress for the tavern in my new town.
                 She has to be nice and cute. 
@@ -195,9 +230,9 @@
                 alt="a misterious masked fancy wizard"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
-                In our next shoot, we're going to a party and I want to shock with my character.
+                In our next session, we're going to a party and I want to shock with my character.
                 He is an androgynous wizard who loves to wear multiple ornaments. 
                 And this time I wish to wear a strange mask
               </p>
@@ -213,7 +248,7 @@
                 alt="a tiefling sorcerer preparing a spell"
               />
             </div>
-            <div class="flipCard__textContainer">
+            <div class="flipCard__textContainer text-white">
               <p>
                 My character will be a tiefling with brown skin and curly white hair.
                 She is a sorceress who is learning to control her powers. 
@@ -247,5 +282,7 @@
     </footer>
     <!-- Footer end -->
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
   </body>
 </html>

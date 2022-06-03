@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/index.css">
     <link rel="shortcut icon" href="../src/img/dinkLogo.ico" type="image/x-icon">
     <title>Dnd_homebrew</title>
@@ -11,25 +12,658 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <a href="../index.html" class="header__logo"
-        ><img src="../src/img/Logo.png" class="logo__img" alt="Dink Arts logo"
-      /></a>
-      <nav class="header__navigationMenu">
-        <a href="characterDesign.html" class="header__navigationMenuItems">Character_design</a> 
-        <a href="dnd_homebrew.html" class="header__navigationMenuItems">Dnd_homebrew</a>  
-        <a href="about_me.html" class="header__navigationMenuItems">About_me</a>  
-        <a href="contact_me.html" class="header__navigationMenuItems">Contact_me</a>  
+      <a href="../index.html" class="header__logo">
+        <img src="../src/img/Logo.png" class="logo__img" alt="Dink Arts logo"/>
+      </a>
+      <nav >
+        <input type="checkbox" name="hamburguerMenuCheckbox" id="hamburguerMenuCheckbox">
+        <label for="menu" class="hamburguerMenuLabel"> ☰ </label>
+        <div class="header__navigationMenu">
+          <a href="../pages/characterDesign.html" class="header__navigationMenuItems">Character_design</a>
+          <a href="../pages/dnd_homebrew.html" class="header__navigationMenuItems">Dnd_homebrew</a>
+          <a href="../pages/about_me.html" class="header__navigationMenuItems">About_me</a>
+          <a href="../pages/contact_me.html" class="header__navigationMenuItems">Contact_me</a>
+        </div>
       </nav>
     </header>
     <!-- Header end -->
     <!-- Body -->
     <main>
+
+      <div class="homebrewCarousel">
+        <div class="container">
+          <input type="radio" name="slider" id="item-1" checked>
+          <input type="radio" name="slider" id="item-2">
+          <input type="radio" name="slider" id="item-3">
+          <input type="radio" name="slider" id="item-4">
+          <input type="radio" name="slider" id="item-5">
+          <input type="radio" name="slider" id="item-6">
+          <input type="radio" name="slider" id="item-7">
+          <div class="cards">
+            <label class="card" for="item-1" id="carou-1">
+              <img src="../src/img/HomeBrew/Moonshard.jpg" alt="The moonshard dagger">
+            </label>
+            <label class="card" for="item-2" id="carou-2">
+              <img src="../src/img/HomeBrew/Qhralli.jpg" alt="A new race Qhralli">
+            </label>
+            <label class="card" for="item-3" id="carou-3">
+              <img src="../src/img/HomeBrew/TreeGiant.jpg" alt="A giant tree monster">
+            </label>
+            <label class="card" for="item-4" id="carou-4">
+              <img src="../src/img/HomeBrew/MetheorBarbarian.jpg" alt="The path of meteor, barbarian subclass">
+            </label>
+            <label class="card" for="item-5" id="carou-5">
+              <img src="../src/img/HomeBrew/CelestialPotion.jpg" alt="A potion made with sacred ingredients">
+            </label>
+            <label class="card" for="item-6" id="carou-6">
+              <img src="../src/img/HomeBrew/CinderLeaf.jpg" alt="The leaf of a tree with strange features">
+            </label>
+            <label class="card" for="item-7" id="carou-7">
+              <img src="../src/img/HomeBrew/WizardSubclass.jpg" alt="The biomancer a wizard subclass">
+            </label>
+          </div>
+        </div>
+      </div>
+
       <h1>Dnd_homebrew</h1>
       <p class="explanationParagraph">
         In this section I publish items, monsters, classes, etc. to share my
         free creations. Whoever collaborates with my Patreon Electrum or higher
         can access all the contents
       </p>
+
+      <span class="row d-flex justify-content-center p-5">
+        <div class="col-12 col-md-3">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-classes-list" data-bs-toggle="list" href="#list-classes" role="tab" aria-controls="list-classes">Classes</a>
+            <a class="list-group-item list-group-item-action" id="list-races-list" data-bs-toggle="list" href="#list-races" role="tab" aria-controls="list-races">Races</a>
+            <a class="list-group-item list-group-item-action" id="list-items-list" data-bs-toggle="list" href="#list-items" role="tab" aria-controls="list-items">Items</a>
+            <a class="list-group-item list-group-item-action" id="list-monster-list" data-bs-toggle="list" href="#list-monster" role="tab" aria-controls="list-monster">Monsters</a>       
+            <a class="list-group-item list-group-item-action" id="list-others-list" data-bs-toggle="list" href="#list-others" role="tab" aria-controls="list-others">Others</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <section class="tab-content" id="nav-tabContent">
+            <article class="tab-pane fade show active" id="list-classes" role="tabpanel" aria-labelledby="list-classes-list">
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#biomancerModal">
+                    <img src="../src/img/HomeBrew/WizardSubclassButton.jpg" alt="Shool of the boimancer wizard button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#infDomaincerModal">
+                    <img src="../src/img/HomeBrew/InfinityClericButton.jpg" alt="Infinity domain cleric button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#meteorPathModal">
+                    <img src="../src/img/HomeBrew/MetheorBarbarianButton.jpg" alt="Path of metheor barbarian button" class="homebrewList__button">
+                  </button>
+            </article>
+            <article class="tab-pane fade" id="list-races" role="tabpanel" aria-labelledby="list-races-list">
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#qhralliModal">
+                    <img src="../src/img/HomeBrew/QhralliButton.jpg" alt="Race qhralli button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#myrachidModal">
+                    <img src="../src/img/HomeBrew/MyrachidButton.jpg" alt="Race myrachid button" class="homebrewList__button">
+                  </button>
+            </article>
+            <article class="tab-pane fade" id="list-items" role="tabpanel" aria-labelledby="list-items-list">
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#hemoglobeModal">
+                    <img src="../src/img/HomeBrew/BloodPotionButton.jpg" alt="Hemoglobe potion button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#celestialPotionModal">
+                    <img src="../src/img/HomeBrew/CelestialPotionButton.jpg" alt="Celestial radiance potion button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#moonShardModal">
+                    <img src="../src/img/HomeBrew/MoonshardButton.jpg" alt="Moonshard dagger button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#sunShardModal">
+                    <img src="../src/img/HomeBrew/SunshardButton.jpg" alt="Sunshard sword button" class="homebrewList__button">
+                  </button>
+            </article>
+            <article class="tab-pane fade" id="list-monster" role="tabpanel" aria-labelledby="list-monster-list">
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#archeleshModal">
+                    <img src="../src/img/HomeBrew/TreeGiantButton.jpg" alt="New monster archelesh button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#dragonmouthModal">
+                    <img src="../src/img/HomeBrew/dragonsmouthButton.jpg" alt="New monster dragonmouth button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#rotGolemModal">
+                    <img src="../src/img/HomeBrew/rotGolemButton.jpg" alt="New monster rot golem button" class="homebrewList__button">
+                  </button>
+            </article>
+            <article class="tab-pane fade" id="list-others" role="tabpanel" aria-labelledby="list-others-list">
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#kingslockModal">
+                    <img src="../src/img/HomeBrew/FlowerKingButton.jpg" alt="Flowerking button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#bladePetalModal">
+                    <img src="../src/img/HomeBrew/FlowerBladeButton.jpg" alt="Bladepetal button" class="homebrewList__button">
+                  </button>
+                  <button type="button" class="btn btn-secondary col-12 my-3" data-bs-toggle="modal" data-bs-target="#cinderleafModal">
+                    <img src="../src/img/HomeBrew/CinderLeafButton.jpg" alt="CinderLeaf button" class="homebrewList__button">
+                  </button>
+            </article>
+          </section>
+        </div>
+      </span>
+
+      <div class="modal fade" id="biomancerModal" tabindex="-1" aria-labelledby="infDomainModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="biomancerCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/WizardSubclass.jpg" alt="A subclass to wizards: the biomancer" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/WizardSubclassInfo.jpg" alt="The info of the subclass to wizards biomancer"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#biomancerCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#biomancerCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="infDomaincerModal" tabindex="-1" aria-labelledby="infDomainModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="infDomainCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/InfinityCleric.jpg" alt="A subclass to cleric: the infinity domain" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/InfinityClericInfo.jpg" alt="The info of the subclass to cleric infinity domain"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#infDomainCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#infDomainCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="meteorPathModal" tabindex="-1" aria-labelledby="meteorPathModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="meteorPathCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/MetheorBarbarian.jpg" alt="A subclass to wizards: the meteorPath" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/MetheorBarbarianInfo.jpg" alt="The info of the subclass to wizards meteorPath"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#meteorPathCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#meteorPathCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="qhralliModal" tabindex="-1" aria-labelledby="qhralliModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="qhralliCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/Qhralli.jpg" alt="A new race of cristal made people: qhralli" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/QhralliInfo.jpg" alt="The info of the race qhralli"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#qhralliCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#qhralliCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myrachidModal" tabindex="-1" aria-labelledby="myrachidModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="myrachidCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/Myrachid.jpg" alt="A new insect based race: Myrachid" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/MyrachidInfo.jpg" alt="The info of the Myrachid race"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myrachidCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myrachidCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="hemoglobeModal" tabindex="-1" aria-labelledby="hemoglobeModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="hemoglobeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/BloodPotion.jpg" alt="A potion made with magical blood" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/BloodPotionInfo.jpg" alt="The info of the hemoglobe potion"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hemoglobeCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hemoglobeCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="celestialPotionModal" tabindex="-1" aria-labelledby="celestialPotionModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="celestialPotionCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/CelestialPotion.jpg" alt="A divine potion" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/CelestialPotionInfo.jpg" alt="The info of the Tyncture of celestial radiance"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#celestialPotionCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#celestialPotionCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="moonShardModal" tabindex="-1" aria-labelledby="moonShardModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="moonShardCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/Moonshard.jpg" alt="A dagger with the power of the moon" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/MoonshardInfo.jpg" alt="The info of the Moonshard"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#moonShardCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#moonShardCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="sunShardModal" tabindex="-1" aria-labelledby="sunShardModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="sunShardCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/Sunshard.jpg" alt="A sword with the power of the sun" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/SunshardInfo.jpg" alt="The info of the Sunshard"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#sunShardCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#sunShardCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="archeleshModal" tabindex="-1" aria-labelledby="archeleshModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="archeleshCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/TreeGiant.jpg" alt="A gargantuan live tree" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/TreeGiantInfo.jpg" alt="The info of the archelesh"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#archeleshCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#archeleshCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="dragonmouthModal" tabindex="-1" aria-labelledby="dragonmouthModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="dragonmouthCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/dragonsmouth.jpg" alt="A dangerous flower monster" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/dragonsmouthInfo1.jpg" alt="Info of the dragonmouth"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/dragonsmouthInfo2.jpg" alt="More info of the dragonmouth"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#dragonmouthCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#dragonmouthCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="rotGolemModal" tabindex="-1" aria-labelledby="rotGolemModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="rotGolemCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/rotGolem.jpg" alt="A rot golem" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/rotGolemInfo.jpg" alt="The info of the rot goelm"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/rotGolemInfo2.jpg" alt="More info of the rot golem"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#rotGolemCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#rotGolemCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="kingslockModal" tabindex="-1" aria-labelledby="kingslockModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="kingslockCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/FlowerKing.jpg" alt="A medicinal flower" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/FlowerKingInfo.jpg" alt="The info of the Kingslock"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#kingslockCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#kingslockCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="bladePetalModal" tabindex="-1" aria-labelledby="bladePetalModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="bladePetalCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/FlowerBlade.jpg" alt="A sharp petal flower" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/FlowerBladeInfo.jpg" alt="The info of the Bladepetal"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#bladePetalCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#bladePetalCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="cinderleafModal" tabindex="-1" aria-labelledby="cinderleafModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg .modal-fullscreen-lg-down	 .modal-fullscreen-sm-down	.modal-fullscreen-md-down">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="cinderleafCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                    <picture class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/CinderLeaf.jpg" alt="A tree leaf grants warm in cold areas" class="homebrewModal__img">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture  class="homebrewModal__picture">
+                      <img src="../src/img/HomeBrew/CinderLeafInfo.jpg" alt="The info of the cinderleaf"  class="homebrewModal__img">
+                    </picture>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cinderleafCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cinderleafCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
     </main>
     <!-- Body end -->
     <!-- Footer -->
@@ -54,5 +688,6 @@
     </footer>
     <!-- Footer end -->
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

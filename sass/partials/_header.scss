@@ -1,0 +1,125 @@
+/*Header*/
+
+.header {
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: var(--spacing-xxsmall);
+  padding-right: var(--spacing-xxsmall);
+
+  &__logo {
+    padding-top: var(--spacing-xxsmall);
+
+    .logo__img {
+      width: 20rem;
+    }
+  }
+  
+  nav input{
+    display: none;
+  }
+
+  .hamburguerMenuLabel{
+    display: none;
+  }
+
+  &__navigationMenu {
+    margin-right: var(--spacing-xxsmall);
+    align-self: flex-end;
+    padding-bottom: var(--spacing-xxsmall);
+    display: flex;
+    gap: var(--spacing-xxsmall);
+    flex-direction: row;
+
+   
+
+    .header__navigationMenuItems {
+      font-family: var(--font-menu);
+      font-size: var(--text-small);
+      color: var(--base);
+      padding: 1rem;
+      border-radius: 10px;
+
+      &:hover {
+        background: var(--primary-dark);
+      }
+    }
+
+    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*Header*/
+  .header {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      display: inline;
+
+      .logo__img {
+        width: 15rem;
+      }  
+    }
+
+    nav input{
+      display: block;
+    }
+
+    #hamburguerMenuCheckbox{
+      display: block;
+      width: 30px;
+      height: 30px;
+      position:absolute;
+      opacity: 0%;
+    }
+
+    
+
+    .hamburguerMenuLabel{
+      box-sizing: border-box;
+      display: inline-block;
+      border: 1px solid var(--text-color);
+      border-radius: 5px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-weight: bold;
+      text-align: center;
+      user-select: none;
+
+      &:checked{
+        background: var(--primary-dark);
+      }
+    }
+
+    &__navigationMenu{
+      display: none;
+    }
+
+    input:checked ~ div.header__navigationMenu{
+      display:flex;
+      flex-direction: column;
+      align-items: flex-end;
+      right: 1px;
+      position: absolute;
+      background: var(--primary);
+      border-radius: 10px;
+      z-index: 10;
+
+      &__items{
+        display: block;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 1px solid var(--secondary);
+      }
+
+      &__items:hover{
+        background: var(--primary-dark);
+      }
+    }
+  }
+}

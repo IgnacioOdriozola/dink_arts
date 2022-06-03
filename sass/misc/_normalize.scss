@@ -1,0 +1,65 @@
+/*Reset*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--base);
+    font-size: var(--text-small);
+}
+
+/*Fonts*/
+
+h1{
+    font-family: var(--font-title);
+    font-size: var(--text-large);
+    text-align: center;
+    font-weight: lighter;
+    margin: var(--spacing-small);
+}
+
+h2{
+    font-family: var(--font-principal);
+    font-size: var(--text-medium);
+}
+
+h3{
+    font-family: var(--font-principal);
+    font-size: var(--text-base);
+    text-align: center;
+}
+
+p{
+    font-family: var(--font-principal);
+    font-size: var(--text-small);
+}
+
+label{
+    font-family: var(--font-principal);
+    font-size: var(--text-small);
+}
+
+/*Body*/
+
+body{
+    background-color: var(--base);
+    display: grid;
+    grid-template-rows: 7em  100% 7em;
+}
+
+.explanationParagraph{
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    body{
+        grid-template-rows: 8em 100% 10em;
+    }
+}

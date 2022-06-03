@@ -1,0 +1,26 @@
+{
+  "name": "dinkarts",
+  "version": "1.0.0",
+  "description": "Dink arts es una página de una artista plastica que dibuja con métodos tradicionales y digitales enfocada a la cultura de los juegos de rol, con creación de contenido reutilizable para D&D 5ta edición",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --include-path scss sass/index.scss style/index.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnacioOdriozola/dink_arts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgnacioOdriozola/dink_arts/issues"
+  },
+  "homepage": "https://github.com/IgnacioOdriozola/dink_arts#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}

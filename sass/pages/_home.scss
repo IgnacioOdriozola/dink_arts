@@ -1,0 +1,40 @@
+/*Index*/
+
+.patreon{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    &__article{
+        width: 255px;
+    }
+
+    &__text{
+        width: 255px;
+        text-align: center;
+    }
+    img:hover{
+        filter: grayscale(50%);
+        -webkit-transform:scale(0.8);
+        transform:scale(0.9)
+    }
+}
+
+@media screen and (max-width: 821px){
+    
+    /*Index*/
+    .patreon{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    /*Index*/
+    .patreon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

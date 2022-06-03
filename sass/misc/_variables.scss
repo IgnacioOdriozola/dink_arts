@@ -1,0 +1,42 @@
+@font-face {
+    font-family: sourceCodePro;
+    src: url(../src/fonts/Source_Code_Pro/SourceCodePro-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: comfortaa;
+    src: url(../src/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: truculenta;
+    src: url(../src/fonts/Truculenta/Truculenta-VariableFont_opsz.wght.ttf);
+}
+
+/*Variables*/
+
+:root{
+    /*Color*/
+    --base: #E8EFED;
+    --primary: #6DA9A8;
+    --primary-dark: #3c5f5f;
+    --secondary: #B2BDBD;
+    --terciary: #BCA588;
+    --text-color: #253030;
+
+    /*Spacings*/
+    --spacing-large: 4rem;
+    --spacing-medium: 2.4rem;
+    --spacing-small: 2rem;
+    --spacing-xxsmall: 0.8rem;
+
+    /*Font family*/
+    --font-principal: comfortaa;
+    --font-title: truculenta;
+    --font-menu: sourceCodePro;
+
+    /*Font size*/
+    --text-large: 5.2em;
+    --text-medium: 2.4em;
+    --text-base: 1.6em;
+    --text-small: 1.6em;
+    --text-xxsmall: .8em
+}

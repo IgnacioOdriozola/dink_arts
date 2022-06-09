@@ -11,7 +11,6 @@ footer {
   .footer__socialMedia {
     display: flex;
     justify-content: space-between;
-    width: 9em;
     align-self: center;
   }
 
@@ -21,6 +20,9 @@ footer {
 
   a {
     align-self: center;
+    padding: 0.5em;
+    font-family: var(--font-menu);
+
 
     svg {
         width: 2em;
@@ -29,9 +31,9 @@ footer {
     }
 
     &:hover {
-        padding: 0.5em;
         border-radius: 10px;
         background: var(--primary-dark);
+        text-decoration: none;
       }
   }
 }

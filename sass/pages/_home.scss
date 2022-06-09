@@ -1,5 +1,9 @@
 /*Index*/
 
+#mobile-sketch{
+    display: none;
+}
+
 .patreon{
     display: flex;
     justify-content: space-around;
@@ -30,6 +34,14 @@
 }
 
 @media screen and (max-width: 480px){
+
+    #mobile-sketch{
+        display: block;
+    }
+
+    #sketch{
+        display: none;
+    }
 
     /*Index*/
     .patreon{

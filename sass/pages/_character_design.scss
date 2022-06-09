@@ -14,8 +14,8 @@
   .flipCard {
     position: relative;
     margin: var(--spacing-medium);
-    width: 35em;
-    height: 45em;
+    width: 90%;
+    height: 40em;
     transform-style: preserve-3d;
     perspective: 1000px;
 
@@ -61,7 +61,7 @@
           padding: 20px;
           background: linear-gradient(45deg, #fe0061, #ffeb3b);
           transform: translateZ(100px);
-          margin-top: 10em;
+          margin-top: 8em;
           border-radius: 10px;
         }
       }
@@ -72,11 +72,14 @@
     }
   }
 
-  .gold .flipCard__textContainer {
-    background: radial-gradient(#f7ef8a, #d2ac47);
+  .gold {
+    width: 70%;
+    .flipCard__textContainer {
+      background: radial-gradient(#f7ef8a, #d2ac47);
 
-    p {
-      margin-top: 10em;
+      p {
+        margin-top: 8em;
+      }
     }
   }
 

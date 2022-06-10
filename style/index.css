@@ -13,13 +13,6 @@
 
 /*Variables*/
 :root {
-  /*Color*/
-  --base: #E8EFED;
-  --primary: #6DA9A8;
-  --primary-dark: #3c5f5f;
-  --secondary: #B2BDBD;
-  --terciary: #BCA588;
-  --text-color: #253030;
   /*Spacings*/
   --spacing-large: 4rem;
   --spacing-medium: 2.4rem;
@@ -47,7 +40,7 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--base);
+  color: #E8EFED;
   font-size: var(--text-small); }
 
 /*Fonts*/
@@ -77,7 +70,7 @@ label {
 
 /*Body*/
 body {
-  background-color: var(--base);
+  background-color: #E8EFED;
   display: grid;
   grid-template-rows: 7em  100% 7em; }
 
@@ -91,7 +84,7 @@ body {
 /* Partials */
 /*Header*/
 .header {
-  background-color: var(--primary);
+  background-color: #6DA9A8;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,11 +108,11 @@ body {
     .header__navigationMenu .header__navigationMenuItems {
       font-family: var(--font-menu);
       font-size: var(--text-small);
-      color: var(--base);
+      color: #E8EFED;
       padding: 1rem;
       border-radius: 10px; }
       .header__navigationMenu .header__navigationMenuItems:hover {
-        background: var(--primary-dark); }
+        background: #3c5f5f; }
 
 @media screen and (max-width: 480px) {
   /*Header*/
@@ -141,7 +134,7 @@ body {
     .header .hamburguerMenuLabel {
       box-sizing: border-box;
       display: inline-block;
-      border: 1px solid var(--text-color);
+      border: 1px solid #253030;
       border-radius: 5px;
       width: 30px;
       height: 30px;
@@ -150,7 +143,7 @@ body {
       text-align: center;
       user-select: none; }
       .header .hamburguerMenuLabel:checked {
-        background: var(--primary-dark); }
+        background: #3c5f5f; }
     .header__navigationMenu {
       display: none; }
     .header input:checked ~ div.header__navigationMenu {
@@ -159,18 +152,18 @@ body {
       align-items: flex-end;
       right: 1px;
       position: absolute;
-      background: var(--primary);
+      background: #6DA9A8;
       border-radius: 10px;
       z-index: 10;
-      box-shadow: 3px 3px 3px 3px var(--primary-dark); }
+      box-shadow: 3px 3px 3px 3px #3c5f5f; }
       .header input:checked ~ div.header__navigationMenu__items {
         display: block;
         margin: 0;
         padding: 10px;
         list-style: none;
-        border-bottom: 1px solid var(--secondary); }
+        border-bottom: 1px solid #B2BDBD; }
       .header input:checked ~ div.header__navigationMenu__items:hover {
-        background: var(--primary-dark); } }
+        background: #3c5f5f; } }
 
 /*Footer*/
 footer {
@@ -178,7 +171,7 @@ footer {
   justify-content: space-evenly;
   padding-left: var(--spacing-xxsmall);
   padding-right: var(--spacing-xxsmall);
-  background-color: var(--secondary);
+  background-color: #B2BDBD;
   align-content: center; }
   footer .footer__socialMedia {
     display: flex;
@@ -193,10 +186,10 @@ footer {
     footer a svg {
       width: 2em;
       height: auto;
-      color: var(--text-color); }
+      color: #253030; }
     footer a:hover {
       border-radius: 10px;
-      background: var(--primary-dark);
+      background: #3c5f5f;
       text-decoration: none; }
 
 @media screen and (max-width: 480px) {
@@ -305,7 +298,7 @@ footer {
   margin-bottom: var(--spacing-small);
   text-align: center;
   width: 100%; }
-  .characterDesignGallery .flipCard {
+  .characterDesignGallery .flipCard, .characterDesignGallery .gold {
     position: relative;
     margin: var(--spacing-medium);
     width: 90%;
@@ -348,7 +341,7 @@ footer {
           transform: translateZ(100px);
           margin-top: 8em;
           border-radius: 10px; }
-    .characterDesignGallery .flipCard:hover .flipCard__body {
+    .characterDesignGallery .flipCard:hover .flipCard__body, .characterDesignGallery .gold:hover .flipCard__body {
       transform: rotateY(180deg); }
   .characterDesignGallery .gold {
     width: 70%; }
@@ -380,10 +373,10 @@ footer {
     grid-column: 11/14; }
 
 @media screen and (max-width: 1425px) {
-  .characterDesignGallery .flipCard {
+  .characterDesignGallery .flipCard, .characterDesignGallery .gold {
     width: 29em;
     height: 40em; }
-    .characterDesignGallery .flipCard .flipCard__body .flipCard__textContainer p {
+    .characterDesignGallery .flipCard .flipCard__body .flipCard__textContainer p, .characterDesignGallery .gold .flipCard__body .flipCard__textContainer p {
       margin-top: 8em; } }
 
 @media screen and (max-width: 821px) {
@@ -438,7 +431,7 @@ footer {
     align-items: center;
     gap: var(--spacing-medium);
     margin-top: var(--spacing-medium); }
-    .characterDesignGallery .flipCard {
+    .characterDesignGallery .flipCard, .characterDesignGallery .gold {
       width: 28rem;
       margin-left: 5rem; }
     .characterDesignGallery .characterDesignGallery__img {
@@ -457,7 +450,7 @@ footer {
   .contactPage .contactForm {
     padding: 15px;
     border-radius: 10px;
-    background-color: var(--secondary); }
+    background-color: #B2BDBD; }
   .contactPage .thanks__text {
     margin-top: var(--spacing-xxsmall);
     margin-bottom: var(--spacing-xxsmall); }
@@ -489,8 +482,8 @@ footer {
   border-radius: 10px; }
 
 .list-group-item.active {
-  background-color: var(--primary);
-  border-color: var(--primary-dark); }
+  background-color: #6DA9A8;
+  border-color: #3c5f5f; }
 
 .homebrewCarousel {
   display: flex;

@@ -1,15 +1,14 @@
 /*About_me*/
 
 .about--flex{
-    display: flex;
+    @include flex-row;
     justify-content: center;
     gap: var(--spacing-large);
     margin: var(--spacing-medium);
 }
 
 .traits{
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     align-content: center;
     gap: var(--spacing-xxsmall);
 }
@@ -18,8 +17,7 @@
     
     /*About_me*/
     .about--flex{
-        display: flex;
-        flex-direction: column;
+        @include flex-col;
         align-items: center;
 
         .portrait{
@@ -64,8 +62,7 @@
         }
 
         .traits{
-            display: flex;
-            flex-direction: column;
+            @include flex-col;
             align-items: center;
 
             &__cardImage{

@@ -1,0 +1,8 @@
+-Se agregan meta de descripcion y keywords
+-Se modifican los titulos de las diferentes pags
+-Se desnestean las carpetas de imagenes y se renombran para mejor organización
+
+
+-Se agrega extend de la clase flipCard
+-Se reemplazan las variables de color por un map
+-Se agrega un mixin reemplazando el display flex

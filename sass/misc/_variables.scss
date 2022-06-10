@@ -14,14 +14,6 @@
 /*Variables*/
 
 :root{
-    /*Color*/
-    --base: #E8EFED;
-    --primary: #6DA9A8;
-    --primary-dark: #3c5f5f;
-    --secondary: #B2BDBD;
-    --terciary: #BCA588;
-    --text-color: #253030;
-
     /*Spacings*/
     --spacing-large: 4rem;
     --spacing-medium: 2.4rem;
@@ -40,3 +32,23 @@
     --text-small: 1.6em;
     --text-xxsmall: .8em
 }
+
+$color: (
+   /*Color*/
+   base: #E8EFED,
+   primary: #6DA9A8,
+   primary-dark: #3c5f5f,
+   secondary: #B2BDBD,
+   terciary: #BCA588,
+   text-color: #253030
+   );
+
+   @mixin flex-row {
+    display: flex;
+    flex-direction: row;
+   }
+
+   @mixin flex-col {
+    display: flex;
+    flex-direction: column;
+   }

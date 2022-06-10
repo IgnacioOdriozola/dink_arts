@@ -73,6 +73,7 @@
   }
 
   .gold {
+    @extend .flipCard;
     width: 70%;
     .flipCard__textContainer {
       background: radial-gradient(#f7ef8a, #d2ac47);
@@ -204,8 +205,7 @@
   /*Character_design*/
 
   .characterDesignGallery {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     align-items: center;
     gap: var(--spacing-medium);
     margin-top: var(--spacing-medium);

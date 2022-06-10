@@ -1,15 +1,15 @@
 /*Footer*/
 
 footer {
-  display: flex;
+  @include flex-row;
   justify-content: space-evenly;
   padding-left: var(--spacing-xxsmall);
   padding-right: var(--spacing-xxsmall);
-  background-color: var(--secondary);
+  background-color: map-get($color,secondary);
   align-content: center;
 
   .footer__socialMedia {
-    display: flex;
+    @include flex-row;
     justify-content: space-between;
     align-self: center;
   }
@@ -27,12 +27,12 @@ footer {
     svg {
         width: 2em;
         height: auto;
-        color: var(--text-color);
+        color: map-get($color,text-color);
     }
 
     &:hover {
         border-radius: 10px;
-        background: var(--primary-dark);
+        background: map-get($color,primary-dark);
         text-decoration: none;
       }
   }
@@ -41,8 +41,7 @@ footer {
 @media screen and (max-width: 480px) {
   /*Footer*/
   footer {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     justify-content: space-evenly;
   }
 }

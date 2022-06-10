@@ -1,8 +1,8 @@
 /*Header*/
 
 .header {
-  background-color: var(--primary);
-  display: flex;
+  background-color: map-get($color,primary);
+  @include flex-row;
   align-items: center;
   justify-content: space-between;
   padding-left: var(--spacing-xxsmall);
@@ -28,21 +28,20 @@
     margin-right: var(--spacing-xxsmall);
     align-self: flex-end;
     padding-bottom: var(--spacing-xxsmall);
-    display: flex;
+    @include flex-row;
     gap: var(--spacing-xxsmall);
-    flex-direction: row;
 
    
 
     .header__navigationMenuItems {
       font-family: var(--font-menu);
       font-size: var(--text-small);
-      color: var(--base);
+      color: map-get($color,base);
       padding: 1rem;
       border-radius: 10px;
 
       &:hover {
-        background: var(--primary-dark);
+        background: map-get($color,primary-dark);
       }
     }
 
@@ -53,7 +52,7 @@
 @media screen and (max-width: 480px) {
   /*Header*/
   .header {
-    display: flex;
+    @include flex-row;
     align-items: center;
 
     &__logo {
@@ -81,7 +80,7 @@
     .hamburguerMenuLabel{
       box-sizing: border-box;
       display: inline-block;
-      border: 1px solid var(--text-color);
+      border: 1px solid map-get($color,text-color);
       border-radius: 5px;
       width: 30px;
       height: 30px;
@@ -91,7 +90,7 @@
       user-select: none;
 
       &:checked{
-        background: var(--primary-dark);
+        background: map-get($color,primary-dark);
       }
     }
 
@@ -105,21 +104,21 @@
       align-items: flex-end;
       right: 1px;
       position: absolute;
-      background: var(--primary);
+      background: map-get($color,primary);
       border-radius: 10px;
       z-index: 10;
-      box-shadow: 3px 3px 3px 3px var(--primary-dark);
+      box-shadow: 3px 3px 3px 3px map-get($color,primary-dark);
 
       &__items{
         display: block;
         margin: 0;
         padding: 10px;
         list-style: none;
-        border-bottom: 1px solid var(--secondary);
+        border-bottom: 1px solid map-get($color,secondary);
       }
 
       &__items:hover{
-        background: var(--primary-dark);
+        background: map-get($color,primary-dark);
       }
     }
   }

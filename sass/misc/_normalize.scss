@@ -11,7 +11,7 @@ html{
 
 a{
     text-decoration: none;
-    color: var(--base);
+    color: map-get($color,base);
     font-size: var(--text-small);
 }
 
@@ -49,7 +49,7 @@ label{
 /*Body*/
 
 body{
-    background-color: var(--base);
+    background-color: map-get($color,base);
     display: grid;
     grid-template-rows: 7em  100% 7em;
 }

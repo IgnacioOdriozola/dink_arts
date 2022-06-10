@@ -1,7 +1,7 @@
 /*Contact_me*/
 
 .contactPage{
-    display: flex;
+    @include flex-row;
     justify-content: center;
     align-items: center;
     gap: 10rem;
@@ -9,7 +9,7 @@
     .contactForm{
         padding: 15px;
         border-radius: 10px;
-        background-color: var(--secondary);
+        background-color: map-get($color,secondary);
     }
     
     .thanks{

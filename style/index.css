@@ -11,6 +11,10 @@
   font-family: truculenta;
   src: url(../src/fonts/Truculenta/Truculenta-VariableFont_opsz.wght.ttf); }
 
+@font-face {
+  font-family: gloria;
+  src: url(../src/fonts/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf); }
+
 /*Variables*/
 :root {
   /*Spacings*/
@@ -22,6 +26,7 @@
   --font-principal: comfortaa;
   --font-title: truculenta;
   --font-menu: sourceCodePro;
+  --font-about:gloria;
   /*Font size*/
   --text-large: 5.2em;
   --text-medium: 2.4em;
@@ -86,6 +91,7 @@ body {
 .header {
   background-color: #6DA9A8;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding-left: var(--spacing-xxsmall);
@@ -103,8 +109,8 @@ body {
     align-self: flex-end;
     padding-bottom: var(--spacing-xxsmall);
     display: flex;
-    gap: var(--spacing-xxsmall);
-    flex-direction: row; }
+    flex-direction: row;
+    gap: var(--spacing-xxsmall); }
     .header__navigationMenu .header__navigationMenuItems {
       font-family: var(--font-menu);
       font-size: var(--text-small);
@@ -118,6 +124,7 @@ body {
   /*Header*/
   .header {
     display: flex;
+    flex-direction: row;
     align-items: center; }
     .header__logo {
       display: inline; }
@@ -168,6 +175,7 @@ body {
 /*Footer*/
 footer {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   padding-left: var(--spacing-xxsmall);
   padding-right: var(--spacing-xxsmall);
@@ -175,6 +183,7 @@ footer {
   align-content: center; }
   footer .footer__socialMedia {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-self: center; }
   footer p {
@@ -238,16 +247,29 @@ footer {
 
 /*About_me*/
 .about--flex {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   gap: var(--spacing-large);
   margin: var(--spacing-medium); }
-
-.traits {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  gap: var(--spacing-xxsmall); }
+  .about--flex .portrait {
+    grid-column: 2/3; }
+  .about--flex .traits {
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: var(--spacing-xxsmall);
+    font-family: var(--font-about);
+    font-size: 3em; }
+    .about--flex .traits .buttonLike {
+      background-color: #79F9FC; }
+    .about--flex .traits .buttonDisLike {
+      background-color: #71ABAC; }
+    .about--flex .traits .buttonAbout {
+      background-color: #FFFFFF; }
+    .about--flex .traits .accordion-body {
+      padding: var(--spacing-medium); }
 
 @media screen and (max-width: 821px) {
   /*About_me*/
@@ -258,34 +280,21 @@ footer {
     .about--flex .portrait {
       width: 45rem; }
     .about--flex .traits {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: repeat(4, 1fr); }
-      .about--flex .traits__card1 {
-        grid-row: 1;
-        grid-column: 1/3; }
-      .about--flex .traits__card2 {
-        grid-row: 1;
-        grid-column: 3/5; }
-      .about--flex .traits__card3 {
-        grid-row: 2;
-        grid-column: 2/4; }
-      .about--flex .traits__cardImage {
-        height: 15rem;
-        width: 22rem; } }
+      display: flex;
+      flex-direction: column;
+      width: 45rem; }
+      .about--flex .traits .accordion-item {
+        width: 100%; } }
 
 @media screen and (max-width: 480px) {
   /*About_me*/
-  .about--flex {
-    flex-direction: column; }
-    .about--flex .portrait {
-      width: 30rem; }
-    .about--flex .traits {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      .about--flex .traits__cardImage {
-        height: auto; } }
+  .about--flex .portrait {
+    width: 30rem; }
+  .about--flex .traits {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    align-items: center; } }
 
 /*Character_design*/
 .characterDesignGallery {
@@ -444,6 +453,7 @@ footer {
 /*Contact_me*/
 .contactPage {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10rem; }
@@ -451,6 +461,8 @@ footer {
     padding: 15px;
     border-radius: 10px;
     background-color: #B2BDBD; }
+    .contactPage .contactForm .formButton {
+      background-color: #6DEAEB; }
   .contactPage .thanks__text {
     margin-top: var(--spacing-xxsmall);
     margin-bottom: var(--spacing-xxsmall); }
@@ -487,6 +499,7 @@ footer {
 
 .homebrewCarousel {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   transition: background 0.4s ease-in;
@@ -502,8 +515,8 @@ footer {
     height: 100%;
     transform-style: preserve-3d;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center; }
     .homebrewCarousel .container input[type="radio"] {
       display: none; }

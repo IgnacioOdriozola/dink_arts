@@ -10,6 +10,9 @@
         padding: 15px;
         border-radius: 10px;
         background-color: map-get($color,secondary);
+        .formButton{
+            background-color: #6DEAEB;
+        }
     }
     
     .thanks{

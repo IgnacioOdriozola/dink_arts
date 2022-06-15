@@ -1,17 +1,44 @@
 /*About_me*/
 
 .about--flex{
-    @include flex-row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    
     justify-content: center;
     gap: var(--spacing-large);
     margin: var(--spacing-medium);
+
+    .portrait{
+        grid-column: 2/3
+    }
+
+    .traits{
+        grid-column: 3/4;
+        @include flex-col;
+        align-content: center;
+        gap: var(--spacing-xxsmall);
+        
+        font-family: var(--font-about);
+        font-size: 3em;
+         
+        .buttonLike{
+            background-color: #79F9FC;
+        }
+
+        .buttonDisLike{
+            background-color: #71ABAC;
+        }
+
+        .buttonAbout{
+            background-color: #FFFFFF;
+        }
+
+        .accordion-body{
+            padding: var(--spacing-medium);
+        }
+    }
 }
 
-.traits{
-    @include flex-col;
-    align-content: center;
-    gap: var(--spacing-xxsmall);
-}
+
 
 @media screen and (max-width: 821px){
     
@@ -25,28 +52,12 @@
         }
 
         .traits{
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: repeat(4, 1fr);
+            @include flex-col;  
+            width: 45rem; 
 
-            &__card1{
-                grid-row: 1;
-                grid-column: 1/3;
-            }
-            &__card2{
-                grid-row: 1;
-                grid-column: 3/5;
-            }
-        
-            &__card3{
-                grid-row: 2;
-                grid-column: 2/4;
-            }
-        
-            &__cardImage{
-                height: 15rem;
-                width: 22rem;
-            }            
+            .accordion-item{
+                width: 100%;
+            }     
         }
     }   
 }
@@ -55,7 +66,6 @@
 
     /*About_me*/
     .about--flex{
-        flex-direction: column;
 
         .portrait{
             width: 30rem;
@@ -63,11 +73,8 @@
 
         .traits{
             @include flex-col;
+            width: 30rem;
             align-items: center;
-
-            &__cardImage{
-                height: auto;
-            }
         }  
     }
 }

@@ -10,6 +10,10 @@
     font-family: truculenta;
     src: url(../src/fonts/Truculenta/Truculenta-VariableFont_opsz.wght.ttf);
 }
+@font-face {
+    font-family: gloria;
+    src: url(../src/fonts/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf);
+}
 
 /*Variables*/
 
@@ -24,6 +28,7 @@
     --font-principal: comfortaa;
     --font-title: truculenta;
     --font-menu: sourceCodePro;
+    --font-about:gloria;
 
     /*Font size*/
     --text-large: 5.2em;

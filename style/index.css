@@ -32,8 +32,8 @@
   --text-medium: 2.4em;
   --text-base: 1.6em;
   --text-small: 1.6em;
-  --text-xxsmall: .8em
-; }
+  --text-xsmall: 1em;
+  --text-xxsmall: .8em; }
 
 /*Reset*/
 * {
@@ -383,21 +383,20 @@ footer {
 
 @media screen and (max-width: 1425px) {
   .characterDesignGallery .flipCard, .characterDesignGallery .gold {
-    width: 29em;
-    height: 40em; }
+    height: 35em; }
     .characterDesignGallery .flipCard .flipCard__body .flipCard__textContainer p, .characterDesignGallery .gold .flipCard__body .flipCard__textContainer p {
-      margin-top: 8em; } }
+      margin-top: 8em;
+      font-size: var(--text-xsmall); }
+  .characterDesignGallery .gold .flipCard__body .flipCard__textContainer p {
+    margin-top: 10em; } }
 
 @media screen and (max-width: 821px) {
   /*Character_design*/
-  .characterDesignGallery .characterDesignGallery__card {
-    width: 0.7fr; }
-    .characterDesignGallery .characterDesignGallery__card .characterDesignGallery__img {
-      width: 32rem; }
-  .characterDesignGallery .characterDesignGallery__card--gold {
-    width: 0.7fr; }
-  .characterDesignGallery .characterDesignGallery__img--gold {
-    width: 40rem; }
+  .characterDesignGallery .flipCard, .characterDesignGallery .gold {
+    height: 28em; }
+  .characterDesignGallery .gold {
+    width: 90%;
+    height: 30em; }
   .characterDesignGallery .card1 {
     grid-column: 2/6;
     grid-row: 2; }
@@ -441,14 +440,17 @@ footer {
     gap: var(--spacing-medium);
     margin-top: var(--spacing-medium); }
     .characterDesignGallery .flipCard, .characterDesignGallery .gold {
-      width: 28rem;
-      margin-left: 5rem; }
-    .characterDesignGallery .characterDesignGallery__img {
-      width: 25rem; }
+      height: 40rem;
+      width: 70%; }
+      .characterDesignGallery .flipCard .flipCard__body .flipCard__textContainer p, .characterDesignGallery .gold .flipCard__body .flipCard__textContainer p {
+        margin-top: 8em;
+        font-size: var(--text-base); }
     .characterDesignGallery .gold {
-      order: -1; }
-      .characterDesignGallery .gold img {
-        width: 28rem; } }
+      order: -1;
+      height: 45rem;
+      width: 75%; }
+      .characterDesignGallery .gold .flipCard__body .flipCard__textContainer p {
+        margin-top: 10em; } }
 
 /*Contact_me*/
 .contactPage {

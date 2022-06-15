@@ -120,13 +120,24 @@
 }
 
 @media screen and (max-width: 1425px) {
-  .characterDesignGallery .flipCard {
-    width: 29em;
-    height: 40em;
-    .flipCard__body {
-      .flipCard__textContainer {
-        p {
-          margin-top: 8em;
+  .characterDesignGallery{
+    .flipCard {
+      height: 35em;
+      .flipCard__body {
+        .flipCard__textContainer {
+          p {
+            margin-top: 8em;
+            font-size: var(--text-xsmall);
+          }
+        }
+      }
+    }
+    .gold{
+      .flipCard__body{
+        .flipCard__textContainer{
+          p{
+            margin-top: 10em;
+          }
         }
       }
     }
@@ -137,20 +148,13 @@
   /*Character_design*/
 
   .characterDesignGallery {
-    .characterDesignGallery__card {
-      width: 0.7fr;
-
-      .characterDesignGallery__img {
-        width: 32rem;
-      }
+    .flipCard{
+      height: 28em;
     }
 
-    .characterDesignGallery__card--gold {
-      width: 0.7fr;
-    }
-
-    .characterDesignGallery__img--gold {
-      width: 40rem;
+    .gold{
+      width: 90%;
+      height: 30em;
     }
 
     .card1 {
@@ -211,19 +215,28 @@
     margin-top: var(--spacing-medium);
 
     .flipCard {
-      width: 28rem;
-      margin-left: 5rem;
+      height: 40rem;
+      width: 70%;
+      .flipCard__body {
+        .flipCard__textContainer {
+          p {
+            margin-top: 8em;
+            font-size: var(--text-base);
+          }
+        }
+      }
     }
+    .gold{
 
-    .characterDesignGallery__img {
-      width: 25rem;
-    }
-
-    .gold {
       order: -1;
-
-      img {
-        width: 28rem;
+      height: 45rem;
+      width: 75%;
+      .flipCard__body{
+        .flipCard__textContainer{
+          p{
+            margin-top: 10em;
+          }
+        }
       }
     }
   }

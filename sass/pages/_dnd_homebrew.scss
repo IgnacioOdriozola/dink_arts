@@ -18,6 +18,10 @@
   border-color: map-get($color,primary-dark);
 }
 
+main .row{
+  margin-right: 0;
+}
+
 .homebrewCarousel {
   @include flex-row;
   align-items: center;

@@ -90,7 +90,8 @@ label {
 body {
   background-color: #e8efed;
   display: grid;
-  grid-template-rows: 7em 100% 7em;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .explanationParagraph {
@@ -277,12 +278,28 @@ footer a:hover {
   transform: scale(0.9);
 }
 
+@media screen and (max-width: 1450px) {
+  .patreon__article {
+    padding: 2rem;
+    width: 20%;
+  }
+  .patreon__article a img {
+    width: 100%;
+  }
+  .patreon__text {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 821px) {
   /*Index*/
   .patreon {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     justify-items: center;
+  }
+  .patreon__article {
+    width: 70%;
   }
 }
 
@@ -299,6 +316,9 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
   }
+  .patreon__article {
+    width: 90%;
+  }
 }
 
 /*About_me*/
@@ -309,8 +329,11 @@ footer a:hover {
   gap: var(--spacing-large);
   margin: var(--spacing-medium);
 }
-.about--flex .portrait {
+.about--flex picture {
   grid-column: 2/3;
+}
+.about--flex picture .portrait {
+  width: 100%;
 }
 .about--flex .traits {
   grid-column: 3/4;
@@ -334,20 +357,31 @@ footer a:hover {
   padding: var(--spacing-medium);
 }
 
+@media screen and (max-width: 1500px) {
+  .about--flex picture {
+    width: 50vw;
+  }
+  .about--flex picture .portrait {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 821px) {
-  /*About_me*/
   .about--flex {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .about--flex .portrait {
-    width: 45rem;
+  .about--flex picture {
+    width: 90%;
+  }
+  .about--flex picture .portrait {
+    width: 100%;
   }
   .about--flex .traits {
     display: flex;
     flex-direction: column;
-    width: 45rem;
+    width: 90%;
   }
   .about--flex .traits .accordion-item {
     width: 100%;
@@ -356,13 +390,9 @@ footer a:hover {
 
 @media screen and (max-width: 480px) {
   /*About_me*/
-  .about--flex .portrait {
-    width: 30rem;
-  }
   .about--flex .traits {
     display: flex;
     flex-direction: column;
-    width: 30rem;
     align-items: center;
   }
 }
@@ -483,7 +513,7 @@ footer a:hover {
 @media screen and (max-width: 1425px) {
   .characterDesignGallery .flipCard,
   .characterDesignGallery .gold {
-    height: 35em;
+    height: 25vw;
   }
   .characterDesignGallery .flipCard .flipCard__body .flipCard__textContainer p,
   .characterDesignGallery .gold .flipCard__body .flipCard__textContainer p {
@@ -495,7 +525,7 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 821px) {
+@media screen and (max-width: 950px) {
   /*Character_design*/
   .characterDesignGallery .flipCard,
   .characterDesignGallery .gold {

@@ -7,8 +7,12 @@
     gap: var(--spacing-large);
     margin: var(--spacing-medium);
 
-    .portrait{
-        grid-column: 2/3
+    picture{
+        grid-column: 2/3;
+
+        .portrait{
+            width: 100%;
+        }
     }
 
     .traits{
@@ -38,22 +42,34 @@
     }
 }
 
-
+@media screen and (max-width: 1500px){
+    .about--flex{
+        picture{
+            width: 50vw;
+            .portrait{
+                width: 100%;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 821px){
     
-    /*About_me*/
     .about--flex{
         @include flex-col;
         align-items: center;
 
-        .portrait{
-            width: 45rem;
+        picture{
+            width: 90%;
+            .portrait{
+                width: 100%;
+            }
         }
+        
 
         .traits{
             @include flex-col;  
-            width: 45rem; 
+            width: 90%; 
 
             .accordion-item{
                 width: 100%;
@@ -66,14 +82,8 @@
 
     /*About_me*/
     .about--flex{
-
-        .portrait{
-            width: 30rem;
-        }
-
         .traits{
             @include flex-col;
-            width: 30rem;
             align-items: center;
         }  
     }

@@ -45,7 +45,7 @@
 @media screen and (max-width: 1500px){
     .about--flex{
         picture{
-            width: 50vw;
+            width: 45vw;
             .portrait{
                 width: 100%;
             }
@@ -68,7 +68,6 @@
         
 
         .traits{
-            @include flex-col;  
             width: 90%; 
 
             .accordion-item{
@@ -76,15 +75,4 @@
             }     
         }
     }   
-}
-
-@media screen and (max-width: 480px){
-
-    /*About_me*/
-    .about--flex{
-        .traits{
-            @include flex-col;
-            align-items: center;
-        }  
-    }
 }
